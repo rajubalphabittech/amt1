@@ -3,7 +3,7 @@ pipeline {
     stages {
        stage('compile stage'){
          steps{
-           withMaven(mavne : 'maven')
+           withMaven(maven : 'maven')
             sh 'mvn clean compile'
          }
        }
@@ -11,7 +11,7 @@ pipeline {
     stages {
        stage('test stage'){
          steps{
-           withMaven(mavne : 'maven')
+           withMaven(maven : 'maven')
             sh 'mvn clean test'
          }
        }
@@ -19,7 +19,7 @@ pipeline {
     stages {
        stage('deploy stage'){
          steps{
-           withMaven(mavne : 'maven')
+           withMaven(maven : 'maven')
             sh 'mvn clean install'
          }
        }
