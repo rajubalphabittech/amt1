@@ -8,21 +8,17 @@ pipeline {
          }
        }
     }
-    stages {
        stage('test stage'){
          steps{
            withMaven(maven : 'maven')
             sh 'mvn clean test'
          }
        }
-    }
-    stages {
        stage('deploy stage'){
          steps{
            withMaven(maven : 'maven')
             sh 'mvn clean install'
          }
        }
-    }
 
 }
